@@ -49,7 +49,7 @@ remotes::install_github('coolbutuseless/defaultlist')
 ## Basic Example
 
 In this example a `defaultlist` is created which will return `FALSE` for
-any access to an unknown element. Besides this, it will bevave
+any access to an unknown element. Besides this, it will behave
 identically to a normal `list()` object.
 
 ``` r
