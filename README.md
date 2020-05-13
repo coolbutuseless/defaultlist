@@ -46,6 +46,38 @@ You can install from
 remotes::install_github('coolbutuseless/defaultlist')
 ```
 
+## Initialisation
+
+Initialise an empty defaultlist using `empty_dlist()`, or initialise a
+default list with values using `dlist()`.
+
+``` r
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Initialise a list with elements - just like you would a normal list
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dl <- dlist(a=1, b=2, 3, .default = 0)
+dl$a
+#> [1] 1
+dl$d
+#> [1] 0
+dl[[27]]
+#> [1] 0
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Initialise an empty defaultlist
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+dl <- empty_dlist(-999)
+
+dl$a 
+#> [1] -999
+dl$a <- 0
+dl$a
+#> [1] 0
+dl$b
+#> [1] -999
+```
+
 ## Basic Example
 
 In this example a `defaultlist` is created which will return `FALSE` for
